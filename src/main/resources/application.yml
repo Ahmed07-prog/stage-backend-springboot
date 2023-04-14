@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/final
+    username: https
+    password: https
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ahmed.https404@gmail.com
+    password: dqnmckhpurpstfjx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: false
+      test-connection: false
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 #60000#
+      refresh-token:
+        expiration: 604800000 # 7 days
+
